@@ -1,0 +1,20 @@
+# デスクトップにフォルダを作って移動
+mkdir -p ~/Desktop/trainer-recruit
+cd ~/Desktop/trainer-recruit
+
+# クリップボードの中身を index.html として保存（← 事前にコードをコピーしておく）
+pbpaste > index.html
+
+# Git 初期化＆コミット
+git init
+git add index.html
+git commit -m "Recruit page MVP"
+
+# main ブランチへ
+git branch -M main
+
+# あなたのリポに紐付け（ユーザー名/URLはそのままでOK）
+git remote add origin https://github.com/Tatsuo-crypto/trainer-recruit.git
+
+# プッシュ
+git push -u origin main
