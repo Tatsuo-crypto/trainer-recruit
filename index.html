@@ -1,20 +1,128 @@
-# デスクトップにフォルダを作って移動
-mkdir -p ~/Desktop/trainer-recruit
-cd ~/Desktop/trainer-recruit
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>トレーナー募集｜T&J GYM</title>
+  <meta name="description" content="AI時代に“人にしかできない仕事”を。未経験OK。武蔵境でパーソナルトレーナー募集。研修・資格取得支援あり。">
+  <style>
+    :root{
+      --brand-1:#5b9df9;--brand-2:#6bd1c9;--ink-1:#0f172a;--ink-2:#334155;--ink-3:#64748b;--bg:#fff;--surface:#f8fafc;--radius:16px;--shadow:0 6px 18px rgba(2,8,23,.08);--w:1100px;
+    }
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;color:var(--ink-2);background:var(--bg);line-height:1.7;letter-spacing:.01em}
+    .container{max-width:var(--w);margin:auto;padding:0 16px}
+    .section{padding:64px 0}.section.alt{background:var(--surface)}.section-title{text-align:center;font-size:clamp(22px,2.6vw,28px);color:var(--ink-1);margin:0 0 20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:.8rem 1.2rem;border-radius:999px;border:1px solid #e2e8f0;color:#fff;background:linear-gradient(135deg,var(--brand-1),var(--brand-2));text-decoration:none;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-lg{font-size:16px;padding:1rem 1.4rem}
+    .hero{background:linear-gradient(135deg,rgba(91,157,249,.08),rgba(107,209,201,.08));border-bottom:1px solid #eef2f7;text-align:center}
+    .hero-inner{padding:72px 0 56px;position:relative}
+    .hero-img{width:100%;max-height:360px;object-fit:cover;border-radius:16px;margin:0 0 20px;display:block;box-shadow:var(--shadow)}
+    .hero-img[src=""]{display:none}
+    .hero h1{margin:0 0 12px;color:var(--ink-1);font-size:clamp(28px,5vw,42px);line-height:1.25}
+    .lead{font-size:clamp(15px,2.3vw,18px);margin:0 0 20px}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:#fff;border:1px solid #e6ebf2;border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px;font-size:18px;color:var(--ink-1)}
+    .detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+    .detail{background:#fff;border:1px solid #e6ebf2;border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}.detail h3{margin:4px 0 8px;font-size:18px;color:var(--ink-1)}
+    .benefit-list{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0;justify-content:center}.benefit-list li{background:#fff;border:1px solid #e2e8f0;padding:.6rem .9rem;border-radius:999px}
+    .entry-form{background:#fff;border:1px solid #e6ebf2;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);max-width:600px;margin:auto}
+    .form-row{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}label{font-weight:600;color:var(--ink-1)}.req{color:#ef4444;font-size:12px;margin-left:.25rem}
+    input,textarea,select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #dbe3ee;font-size:16px;box-sizing:border-box}
+    /* BEGIN:form-actions */.form-actions{display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;text-align:center}.form-note{font-size:13px;color:var(--ink-3);margin:0}/* END:form-actions */
+    .site-footer{border-top:1px solid #eef2f7;background:#fff;padding:20px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--w);margin:auto;padding:0 16px}.copy{margin:0;color:var(--ink-3);font-size:14px}
+    /* Readability helpers */
+    .thumb{width:100%;height:140px;object-fit:cover;border-radius:12px;margin:0 0 10px;display:block}
+    img.thumb[src=""]{display:none}
+    /* Icon toggle (off by default) → 有効化したい時は <body data-icons="on"> にしてください */
+    .ico{display:none}
+    body[data-icons="on"] .ico{display:inline-block}
+    .ico::before{content:attr(data-ico);margin-right:6px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><span class="brand-text">T&J GYM</span><span class="divider">｜</span><span class="brand-sub">Trainer Recruiting</span></div>
+      
+    </div>
+  </header>
 
-# クリップボードの中身を index.html として保存（← 事前にコードをコピーしておく）
-pbpaste > index.html
+  <main>
+    <!-- BEGIN:hero -->
+<section class="hero">
+      <div class="container hero-inner">
+        <img class="hero-img" src="" alt="ヒーロー画像">
+        <h1>AI時代に、“人にしかできない仕事”を武器に。</h1>
+        <p class="lead">週末からでも現場で学べる。未経験OK。研修と伴走で、安心してデビューできます。</p>
+        <div class="hero-actions"><a class="btn btn-lg" href="#entry">説明会・応募はこちら</a></div>
+      </div>
+    </section>
+<!-- END:hero -->
 
-# Git 初期化＆コミット
-git init
-git add index.html
-git commit -m "Recruit page MVP"
+    <!-- BEGIN:appeal -->
+<section id="appeal" class="section alt">
+      <div class="container">
+        <h2 class="section-title">T&J GYMの魅力</h2>
+        <div class="card-grid">
+          <article class="card">
+            <img class="thumb" src="" alt="">
+            <h3><span class="ico" data-ico="💪"></span>プロのトレーナーへ成長できる</h3>
+            <p>実践→フィードバックで現場力を段階的に習得。デビューまで伴走します。</p>
+          </article>
+          <article class="card">
+            <img class="thumb" src="" alt="">
+            <h3><span class="ico" data-ico="✨"></span>未経験者歓迎</h3>
+            <p>座学＋シャドーからスタート。現場で使える台本や食事指導テンプレも用意しています。</p>
+          </article>
+          <article class="card">
+            <img class="thumb" src="" alt="">
+            <h3><span class="ico" data-ico="🎓"></span>資格取得支援</h3>
+            <p>学習教材・受験費用の一部補助で、NSCA／NESTA／JATIなどの取得をサポート。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+<!-- END:appeal -->
 
-# main ブランチへ
-git branch -M main
+    <!-- BEGIN:details -->
+<section id="details" class="section alt">
+      <div class="container">
+        <h2 class="section-title">募集要項</h2>
+        <div class="detail-grid">
+          <div class="detail"><h3>業務内容</h3><ul><li>パーソナルトレーニング指導（1回60分・最大1日4セッション）</li><li>体力測定・セッション記録・食事サポート作業</li><li>研修（初回）：実習4h＋テストを同行実践</li></ul></div>
+          <div class="detail"><h3>応募条件</h3><p><strong>必須</strong></p><ul><li>人と話すのが好き／約束を守れる（時間厳守・報告連絡相談）</li><li>週2日以上・1日4時間以上の勤務が可能（シフト制）</li><li>基本的なスマホ操作（LINE/Googleカレンダー）</li></ul><p><strong>歓迎（どれか一つでも）</strong></p><ul><li>トレーニング指導経験者</li><li>パーソナルジム・フィットネス施設での就業経験</li><li>NSCA/NESTA/JATIなどの認定資格所有</li></ul></div>
+          <div class="detail"><h3>勤務地・勤務時間・報酬</h3><ul><li>勤務地：T&J GYM2号店（JR中央線「武蔵境駅」徒歩5分） or T&J GYM1号店（JR中央線「武蔵境駅」徒歩15分）</li><li>勤務時間：9:00–21:00の間でシフト制（例：平日9–15時／土曜15–21時）</li><li>報酬モデル：業務委託：歩合制45–60%（経験・指名数で決定）／アルバイト：時給1,300–1,800円＋指名インセン200円/本</li><li>試用・研修：1–2ヶ月（研修参加あり／指名インセン適用）</li><li>交通費：1日上限1,000円まで支給</li></ul></div>
+        </div>
+        
+      </div>
+    </section>
+<!-- END:details -->
 
-# あなたのリポに紐付け（ユーザー名/URLはそのままでOK）
-git remote add origin https://github.com/Tatsuo-crypto/trainer-recruit.git
+    <section id="entry" class="section">
+      <div class="container">
+        <h2 class="section-title">応募フォーム（最低限の入力項目）</h2>
+        <!-- BEGIN:entry-form -->
+<form class="entry-form" action="#" method="post" onsubmit="return false" aria-label="応募フォーム">
+          <div class="form-row"><label for="name">お名前 <span class="req">必須</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="form-row"><label for="age">年齢 <span class="req">必須</span></label><input id="age" name="age" type="number" inputmode="numeric" min="16" max="100" placeholder="例）24" required></div>
+          <div class="form-row"><label for="gender">性別 <span class="req">必須</span></label><select id="gender" name="gender" required><option value="" selected>選択してください</option><option value="male">男性</option><option value="female">女性</option><option value="other">その他</option><option value="no-answer">回答しない</option></select></div>
+          <div class="form-row"><label for="bday">生年月日 <span class="req">必須</span></label><input id="bday" name="bday" type="date" autocomplete="bday" required></div>  
+          <div class="form-row"><label for="email">メール <span class="req">必須</span></label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" required></div>
+          <div class="form-row"><label for="tel">電話番号 <span class="req">必須</span></label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required></div> 
+          <div class="form-row"><label for="msg">自己紹介 <span class="req">必須</span></label><textarea id="msg" name="message" rows="4" placeholder="例）未経験ですが人に教えるのが好きで…" required></textarea></div>
+          <div class="form-actions"><button class="btn btn-lg" type="submit">応募する</button><p class="form-note">送信で受付完了（担当より24時間以内にご連絡します）</p></div>
+        </form>
+<!-- END:entry-form -->
+      </div>
+    </section>
+  </main>
 
-# プッシュ
-git push -u origin main
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="copy">© T&J GYM</p>
+      <p class="contact"><a href="mailto:info@example.com">info@example.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
